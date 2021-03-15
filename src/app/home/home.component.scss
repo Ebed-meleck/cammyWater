@@ -1,0 +1,11 @@
+section#produit {
+  margin-top: 30px;
+  h1 {
+    color: #226cdbec;
+    border-bottom: solid 3px #226cdbec;
+    border-width: none;
+  }
+  .produit-title {
+    border-bottom: solid 3px blue($color: #226cdbec);
+  }
+}
