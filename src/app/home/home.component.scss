@@ -1,11 +1,144 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../../assets/police/Montserrat/Montserrat-Black.ttf")
+      format("truetype"),
+    url("../../assets/police/Montserrat/Montserrat-Bold.ttf") format("truetype"),
+    url("../../assets/police/Montserrat/Montserrat-Medium.ttf")
+      format("truetype");
+  font-family: Source Sans Pro;
+  src: url("../../assets/police/Source_Sans_Pro/SourceSansPro-Black.ttf")
+      format("truetype"),
+    url("../../assets/police/Source_Sans_Pro/SourceSansPro-Bold.ttf")
+      format("truetype"),
+    url("../../assets/police/Source_Sans_Pro/SourceSansPro-Regular.ttf")
+      format("truetype");
+}
+
 section#produit {
   margin-top: 30px;
+  padding-bottom: 5%;
+
   h1 {
-    color: #226cdbec;
-    border-bottom: solid 3px #226cdbec;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    font-style: normal;
+    color: #0869b0;
+    border-bottom: solid 3px #0869b0;
     border-width: none;
   }
   .produit-title {
-    border-bottom: solid 3px blue($color: #226cdbec);
+    border-bottom: solid 3px blue($color: #0869b0);
+  }
+  div.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin-top: 10%;
+    border: solid 4px none;
+    box-shadow: 3px 3px 4px 5px gray;
+    cursor: pointer;
+    .image {
+      display: block;
+      width: 240px;
+      height: 240px;
+      margin-right: 10px;
+      padding: 5px;
+    }
+    p {
+      text-align: justify;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin-left: 10px;
+    }
+    h3 {
+      font-size: 25px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      width: 100%;
+      color: "white";
+      padding: 10px;
+      margin-bottom: -10px;
+      background-color: #0869b0;
+      border-radius: 1px 3px / 3px 4px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+//
+section#distribution {
+  background-color: #f5f5f5;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    font-style: normal;
+    color: #0869b0;
+  }
+  p {
+    font-family: Source Sans Pro, "Segoe UI", Tahoma, Geneva, Verdana,
+      sans-serif, sans-serif;
+    //font-weight: 400;
+    font-size: 17px;
+    font-style: normal;
+    line-height: 27px;
+    color: #777777;
+  }
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    transform: scale(1, 1);
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 300ms;
+}
+
+section#about {
+  margin-top: 4%;
+
+  background: no-repeat url("../../assets/img/bgWater.jpg") fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1 {
+    font-family: Montserrat, Arial, Helvetica, sans-serif sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    font-style: normal;
+    color: #2458c9;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif, "Segoe UI", Tahoma, Geneva,
+      Verdana, sans-serif, sans-serif;
+    //font-weight: 400;
+    font-size: 17px;
+    font-style: normal;
+    line-height: 27px;
+    color: #a09898;
+  }
+  a {
+    text-decoration: none;
+  }
+  mat-raised-button:hover {
+    transform: scale(1.2);
   }
 }

@@ -1,11 +1,14 @@
 nav {
+  box-shadow: 3px 3px rgb(212, 212, 212);
   ul {
     li {
       a {
-        font-size: 1.2em;
+        font-size: 15px;
+        line-height: 23px;
+        font-weight: 600;
         font-style: normal;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: rgba(36, 77, 189, 0.8);
+        font-family: sans-serif;
+        color: #0869b0;
       }
     }
   }
