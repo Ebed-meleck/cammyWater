@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import * as Aos from 'aos';
 import { Subject } from 'rxjs';
-import * as $ from 'jquery';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -40,11 +40,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit() {
-    $(document).ready(function () {
-      $('customer-logos');
-    });
-  }
+  ngAfterViewInit() {}
 
   // el: Element = document.getElementById('distribution');
 }
