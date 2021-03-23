@@ -1,8 +1,8 @@
 section#page-banner {
-  margin-top: 10%;
-  background-image: url("../../assets/img/Chateau-deau.jpg") cover no-repeat
-    center center;
-  position: relative;
+  background: no-repeat cover center center;
+  padding-top: 200px;
+  padding-bottom: 60px;
+  width: 100%;
   .pt-200 {
     padding-top: 200px;
   }
@@ -58,9 +58,11 @@ section#page-banner {
 }
 
 section#distribution-content {
+  margin-top: 20px;
   @media (max-width: 992px) {
     .p-t-50 {
-      padding-top: 30px i !important;
+      padding-top: 30px !important;
+      margin-right: -30px !important;
     }
     .p-b-50 {
       padding-bottom: 30px !important;
@@ -83,4 +85,26 @@ section#distribution-content {
     border-width: none;
     text-transform: uppercase;
   }
+}
+section#distri-collab {
+  .container {
+    .row {
+      h3 {
+        font-size: 18px;
+        font-size: medium;
+        font-weight: 400;
+        font-style: normal;
+        color: #0869b0;
+      }
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  margin-top: 10px;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+  background-color: #a6aaad;
 }

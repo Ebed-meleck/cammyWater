@@ -5,6 +5,10 @@ body {
   font-style: normal;
   line-height: 24px;
   color: #212529;
-  margin-bottom: opx;
-  padding-bottom: 0px;
+  margin: opx;
+  padding: 0px;
+  @media (max-width: 414px) {
+    margin-right: -40px;
+    padding-right: 0px;
+  }
 }

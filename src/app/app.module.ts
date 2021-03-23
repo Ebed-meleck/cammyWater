@@ -11,9 +11,12 @@ import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { DistributionComponent } from './distribution/distribution.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, DistributionComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, DistributionComponent, AboutComponent, ContactComponent, FourOhFourComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
