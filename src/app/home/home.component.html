@@ -173,7 +173,7 @@
           ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem ipsumlorem
           ipsum lorem lorem ipsum lorem ipsum lorem lorem ipsum
         </p>
-        <a mat-raised-button routerLink="distribution">
+        <a mat-raised-button class="btn btn-primary" (click)="onDistribution()">
           Cliquer pour en savoir plus
         </a>
       </div>
@@ -208,7 +208,9 @@
         ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem ipsumlorem
         ipsum lorem lorem ipsum lorem ipsum lorem lorem ipsum
       </p>
-      <a mat-raised-button routerLink="" color="primary">Read a more</a>
+      <a mat-raised-button (click)="onAbout()" class="btn btn-primary"
+        >Read a more</a
+      >
     </div>
   </div>
 </section>

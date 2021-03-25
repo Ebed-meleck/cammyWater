@@ -9,6 +9,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import * as Aos from 'aos';
 import { Subject } from 'rxjs';
 
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit {
   };
 
   @Output() observe = new IntersectionObserver(this.handler, this.options);
-  constructor() {}
+  constructor(private router: Router) {}
   ngOnInit() {
     Aos.init();
   }
@@ -38,6 +39,13 @@ export class HomeComponent implements OnInit {
         console.log('no visible');
       }
     });
+  }
+
+  onDistribution() {
+    this.router.navigate(['/distribution']);
+  }
+  onAbout() {
+    this.router.navigate(['/about-us']);
   }
 
   ngAfterViewInit() {}

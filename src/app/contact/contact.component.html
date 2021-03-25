@@ -1,1 +1,88 @@
-<p>contact works!</p>
+<section
+  id="contact-banner"
+  style="background-image: url(../../assets/img/327216.png)"
+  class="pt-200 pb-35 bg_cover w-100"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="banner-content">
+          <h3>Nous contacter</h3>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a routerLink="/">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                <a>Contact-us</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <h3>Nos horaires</h3>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-8">
+        <h3>Ecrivez votre message</h3>
+        <form [formGroup]="contactForm">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              formControlName="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              formControlName="emailAdresse"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="objet">Objet</label>
+            <input
+              type="text"
+              id="objet"
+              class="form-control"
+              formControlName="objet"
+            />
+          </div>
+          <div class="form-group">
+            <label for="content">Message</label>
+            <textarea
+              id="content"
+              cols="30"
+              rows="7"
+              class="form-control"
+              formControlName="content"
+              required
+            ></textarea>
+          </div>
+          <button
+            mat-raised-button
+            class="btn btn-primary"
+            (click)="onContact()"
+            [disabled]="contactForm.invalid"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
