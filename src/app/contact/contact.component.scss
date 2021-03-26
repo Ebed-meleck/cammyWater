@@ -61,6 +61,31 @@ section#contact-content {
   margin-top: 15px;
   padding-top: 20px;
   padding-bottom: 15px;
+  .cammy-info {
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: sans-serif;
+      font-style: normal;
+      color: rgba(36, 31, 31, 0.8);
+    }
+    p {
+      margin-top: 16px;
+      font-size: 15px;
+      text-align: justify;
+      font-family: "Montserrat" sans-serif;
+      a {
+        text-decoration: none;
+        color: inherit;
+        margin-left: 35px;
+        margin-top: 10px;
+      }
+      &:hover {
+        text-decoration: none;
+        color: none;
+      }
+    }
+  }
 }
 
 section#mp {

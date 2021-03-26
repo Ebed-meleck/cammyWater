@@ -7,11 +7,24 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'distribution', component: DistributionComponent },
-  { path: 'about-us', component: AboutComponent },
-  { path: 'contact-us', component: ContactComponent },
-  { path: '', component: HomeComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
+  {
+    path: 'distribution',
+    loadChildren: () =>
+      import('./distribution/distribution.module').then(
+        (D) => D.DistributionModule
+      ),
+  },
+  {
+    path: 'about-us',
+    loadChildren: () =>
+      import('./about/about.module').then((A) => A.AboutModule),
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./contact/contact.module').then((C) => C.ContactModule),
+  },
 ];
 
 @NgModule({

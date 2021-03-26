@@ -6,36 +6,24 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { HomeComponent } from './home/home.component';
-
 import { FooterComponent } from './footer/footer.component';
-import { DistributionComponent } from './distribution/distribution.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+/** featured module */
 
+import { HomeModule } from './home/home.module';
+import { AboutModule } from './about/about.module';
+import { ContactModule } from './contact/contact.module';
+import { DistributionModule } from './distribution/distribution.module';
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    FooterComponent,
-    DistributionComponent,
-    AboutComponent,
-    ContactComponent,
-    FourOhFourComponent,
-  ],
+  declarations: [AppComponent, NavbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
-    MatButtonModule,
+    HomeModule,
+    AboutModule,
+    ContactModule,
+    DistributionModule,
     MatIconModule,
-    FormsModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

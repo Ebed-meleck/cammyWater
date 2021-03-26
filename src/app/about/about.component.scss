@@ -61,4 +61,10 @@ section#about-content {
     color: #0869b0;
     font-weight: 700;
   }
+
+  @media (max-width: 576px) {
+    .camy {
+      padding: 15px;
+    }
+  }
 }
