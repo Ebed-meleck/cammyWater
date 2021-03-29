@@ -2,7 +2,7 @@ section#page-banner {
   background: no-repeat cover center center;
   padding-top: 200px;
   padding-bottom: 60px;
-  width: 100%;
+
   .pt-200 {
     padding-top: 200px;
   }
@@ -59,10 +59,10 @@ section#page-banner {
 
 section#distribution-content {
   margin-top: 20px;
-  @media (max-width: 992px) {
+  @media (max-width: 990px) {
     .p-t-50 {
       padding-top: 30px !important;
-      margin-right: -30px !important;
+      margin-right: 60px !important;
     }
     .p-b-50 {
       padding-bottom: 30px !important;
@@ -75,7 +75,7 @@ section#distribution-content {
     padding-top: 50px !important;
   }
   .container h1 {
-    font-family: Montserrat, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;

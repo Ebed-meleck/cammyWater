@@ -1,0 +1,15 @@
+<div class="backdrop" id="back" (click)="onClose()"></div>
+
+<div class="alert-box" id="box">
+  <p>{{ messages }}</p>
+  <div class="alert-box-actions">
+    <button
+      class="btn btn-success"
+      id="btn-alert"
+      mat-raised-button
+      (click)="onClose()"
+    >
+      Okay
+    </button>
+  </div>
+</div>

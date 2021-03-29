@@ -1,3 +1,9 @@
+<app-alert
+  [messages]="success"
+  *ngIf="!hide"
+  (close)="_onHandler()"
+></app-alert>
+
 <section
   id="contact-banner"
   style="background-image: url(../../assets/img/327216.png)"
@@ -61,7 +67,7 @@
       </div>
       <div style="margin-top: 20px" class="col-sm-12 col-md-12 col-lg-8">
         <h2>Nous ecrire</h2>
-        <form [formGroup]="contactForm">
+        <form [formGroup]="contactForm" (ngSubmit)="onContact()">
           <div class="form-group">
             <label for="name">Nom</label>
             <input
@@ -72,16 +78,18 @@
               required
             />
           </div>
+
           <div class="form-group">
             <label for="email">Adresse email</label>
             <input
               type="email"
               id="email"
               class="form-control"
-              formControlName="emailAdresse"
+              formControlName="emailAdress"
               required
             />
           </div>
+
           <div class="form-group">
             <label for="objet">Objet</label>
             <input
@@ -89,8 +97,10 @@
               id="objet"
               class="form-control"
               formControlName="objet"
+              required
             />
           </div>
+
           <div class="form-group">
             <label for="content">Message</label>
             <textarea
@@ -102,11 +112,12 @@
               required
             ></textarea>
           </div>
+
           <button
             mat-raised-button
             class="btn btn-primary"
-            (click)="onContact()"
-            [disabled]="contactForm.invalid"
+            type="submit"
+            [disabled]="!contactForm.valid"
           >
             Envoyer
           </button>

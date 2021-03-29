@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -14,12 +15,14 @@ import { Contact } from '../model/contactUs.model';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  public message: String = '';
-  public contactForm = new FormGroup({
-    name: new FormControl(),
-    emailAdresse: new FormControl(),
-    objet: new FormControl(),
-    content: new FormControl(),
+  success: string = '';
+  hide: boolean = true;
+
+  contactForm: FormGroup = this.formBuilder.group({
+    name: ['', Validators.required],
+    emailAdress: ['', Validators.required],
+    objet: ['', Validators.required],
+    content: ['', Validators.required],
   });
 
   public lat: number = -4.4093392;
@@ -31,24 +34,29 @@ export class ContactComponent implements OnInit {
   }
 
   initFrom() {
-    this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      emailAdresse: ['', Validators.required, Validators.email],
-      objet: ['', Validators.required],
-      content: ['', Validators.required],
-    });
+    return this.contactForm;
   }
+
+  get getControl() {
+    return this.contactForm.controls;
+  }
+
   onContact() {
     const contactForm = this.contactForm.value;
     const contact = new Contact(
       contactForm['name'],
-      contactForm['emailAdresse'],
+      contactForm['emailAdress'],
       contactForm['objet'],
       contactForm['content']
     );
+
     //add service backend on firebase
+
+    this.hide = false;
+    this.success = 'Merci de nous avoir contacter !';
     this.contactForm.reset();
-    this.message = 'Votre message est envoyer avec success';
-    alert(this.message);
+  }
+  _onHandler() {
+    this.hide = true;
   }
 }
