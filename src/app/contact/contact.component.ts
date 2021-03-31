@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup = this.formBuilder.group({
     name: ['', Validators.required],
-    emailAdress: ['', Validators.required],
+    emailAdress: ['', [Validators.required, Validators.email]],
     objet: ['', Validators.required],
     content: ['', Validators.required],
   });

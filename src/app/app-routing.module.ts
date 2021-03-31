@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((H) => H.HomeModule),
+    component: HomeComponent,
   },
 
   {
@@ -29,7 +29,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./contact/contact.module').then((C) => C.ContactModule),
   },
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home',
+  },
   {
     path: '**',
     loadChildren: () =>
@@ -38,7 +42,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -17,7 +17,7 @@ import { DistributionModule } from './distribution/distribution.module';
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'cammy-water' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HomeModule,
