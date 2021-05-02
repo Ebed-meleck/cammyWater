@@ -15,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@angular/animations": "^11.1.0",
     "@angular/cdk": "^11.1.0",
     "@angular/common": "^11.1.0",
@@ -30,6 +31,7 @@
     "@angular/router": "^11.1.0",
     "@nguniversal/express-engine": "^11.1.0",
     "all": "*",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
     "dependencies": "0.0.1",
@@ -37,6 +39,7 @@
     "jquery": "^3.5.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
+    "save-dev": "0.0.1-security",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
